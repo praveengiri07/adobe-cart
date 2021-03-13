@@ -4,13 +4,7 @@ import { Product } from './products/product.js'
 
 let productsListing = document.getElementById("product-listing");
 let cartsTable = document.getElementById("cart_listing");
-/**
- * Create some products 
- */
- // let product1 = new Product({
- //    name: 'Lucky Dube Reggae Album 1',
- //    price: 69
- // })
+
 
  let product1 = new Product({
     name: "Samsung Series 4",
@@ -134,7 +128,6 @@ function renderCarts(e) {
     var totalDiscount = 0
     var orderTotal = 0
     for (let item of Object.keys(cart.items)) {
-        //console.log(item)
         let dv = document.createElement('div');
         dv.classList.add("cart_item")
         var product = cart.catalog.products.find(pdt => {
@@ -174,6 +167,4 @@ function renderCarts(e) {
 
 renderCarts(cart.items);
 
-console.log(cart.catalog.products)
-//console.log("catalog" + catalog.getProducts())
 renderProducts(catalog.getProducts()) 

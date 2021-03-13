@@ -7,7 +7,6 @@ export class Cart {
     addItem(productId, quantity = 1) {
         var prodExist = 0
         prodExist = this.items[productId]
-        //this.items[productId] = quantity
             console.log(this.items[productId])
         if(typeof prodExist !== "undefined"){
             console.log(prodExist)
@@ -40,5 +39,3 @@ export class Cart {
         delete this.items[productId]
     }
 }
-
-//module.exports = Cart 
