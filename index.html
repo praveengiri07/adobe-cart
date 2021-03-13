@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Adobe Cart</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <link rel="stylesheet" type="text/css" href="./src/css/custom.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h2>All Items</h2>
+				<span class="cart-added" id="cart-added">Items2 added to card</span>
+			</div>
+		</div>
+		<div class="container">
+			<div class="product-listing" id="product-listing">
+			</div>
+			<div class="cart">
+				<div class="cart_items">
+					<div class="header">
+						<div class="items_count" id="items_count">Items 4</div>
+						<div class="items_quantity"> Qty </div>
+						<div class="items_price">Price</div>
+					</div>
+					<div class="cart_listing" id="cart_listing" >
+						<div class="cart_item">
+							<div class="item_details">
+								<img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" class="thumbnail">
+								<div class="name">Items1</div>
+							</div>
+							<div class="items_quantity">
+								<input type="button" value="-" class="button-minus" data-field="input_quantity">
+                    			<input type="number" value="1" min="1" step="1" max="" name="input_quantity" class="input_quantity" id="item_quantity" onchange="check_quantity(4)"> 
+                    			<input type="button" value="+" class="button-plus" data-field="input_quantity">
+							</div>
+							<div class="items_price">$750</div>
+						</div>
+						<div class="cart_item">
+							<div class="item_details">
+								<img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" class="thumbnail">
+								<div class="name">Items1</div>
+							</div>
+							<div class="items_quantity">
+								<input type="button" value="-" class="button-minus" data-field="input_quantity">
+                    			<input type="number" value="1" min="1" step="1" max="" name="input_quantity" class="input_quantity" id="item_quantity" onchange="check_quantity(4)"> 
+                    			<input type="button" value="+" class="button-plus" data-field="input_quantity">
+                    		</div>
+							<div class="items_price">$750</div>
+						</div>
+					</div>
+					<div class="cart_total">
+						<div class="item_total">
+							<b>Total</b>
+						</div>
+						<div class="items_total_quantity half-width" id="items_counts"> items(4) </div>
+						<div class="items_total_quantity_value half-width" id="totalPrice"> $1070 </div>
+						<div class="half-width items_discount">Discount</div>
+						<div class="half-width items_discount_value" id="totalDiscount">$120</div>
+						<div class="half-width items_type_discount">Type Discount</div>
+						<div class="half-width items_type_discount_value">$0</div>
+						<div class="cart_subtotal">
+							<div class="half-width items_subtotal">Order Total</div>
+							<div class="half-width items_subtotal_value" id="orderTotal">$120</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="src/index.js" type="module"></script>
+	</body>
+</html>
