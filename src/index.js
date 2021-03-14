@@ -119,8 +119,8 @@ function renderProducts(cart2) {
 
 }
 
-cart.addItem(product1.id, 10)
-cart.addItem(product2.id, 2)
+cart.addItem(product1.id, 3)
+cart.addItem(product2.id)
 function renderCarts(e) {
     cartsTable.innerHTML="";
     var totalItem = 0;
