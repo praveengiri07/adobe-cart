@@ -1,0 +1,246 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html, body
+  padding: 0
+  margin: 0
+  font-family: Montserrat, sans-serif
+  font-size: 15px
+  line-height: 1.5
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-stroke: 0
+  color: #231f20
+
+.container
+  margin: auto
+  display: block
+  position: relative
+  max-width: 1420px
+
+.header
+  padding: 5px
+  margin: 20px
+  border-top: 1px solid #000
+  border-bottom: 1px solid #000
+  position: relative
+  display: flex
+
+  h2
+    margin-block-start: 0
+    margin-block-end: 0
+    font-weight: normal
+
+  .cart-added
+    display: none
+    position: absolute
+    top: 25%
+    padding: 0px 5px
+    left: 45%
+    width: auto
+    text-align: center
+    background-color: #6fcd5c
+    color: #fff
+    transition: all 0.5s linear
+
+.product-listing
+  padding: 10px
+  position: relative
+  width: 65%
+  float: left
+
+  .product
+    max-width: 33%
+    width: calc(31% - 10px)
+    position: relative
+    overflow: hidden
+    border: 1px solid #c3c2c2
+    margin: 7px
+    float: left
+
+    img
+      max-width: 100%
+      width: calc(100% - 40px)
+      padding: 20px
+
+    span.discount
+      background-color: #6fcd5c
+      color: #fff
+      position: absolute
+      top: 20px
+      left: 0
+      font-size: 0.7em
+      padding: 2px 5px
+
+.product .details
+  background: #efefef
+  padding: 5px
+  position: relative
+
+  .name
+    font-size: 0.9em
+
+  .price
+    font-weight: bold
+
+    strike
+      font-weight: normal
+      text-decoration: none
+      position: relative
+      display: inline-block
+
+      &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        border-top: 2px solid red
+        height: 45%
+        height: calc(50% - 1px)
+        width: 100%
+
+  .add_cart
+    position: absolute
+    right: 5px
+    bottom: 5px
+    border: 1px solid #039be5
+    border-radius: 5px
+    padding: 5px
+    color: #039be5
+    cursor: pointer
+
+.half-width
+  width: 50%
+  float: left
+
+.cart
+  position: relative
+  width: 33%
+  float: right
+  overflow: hidden
+
+.cart_items
+  .items_count, .items_quantity, .items_price
+    width: 60%
+    float: left
+
+.cart_item
+  .item_details, .items_quantity, .items_price
+    width: 60%
+    float: left
+
+.cart_items
+  .items_quantity, .items_price
+    width: 18%
+    text-align: center
+
+.cart_item
+  .items_quantity, .items_price
+    width: 18%
+    text-align: center
+
+  .items_quantity, .items_price
+    padding-top: 10%
+
+  position: relative
+
+  img
+    max-width: 30%
+    width: calc(30% - 10px)
+    padding: 5px
+    float: left
+
+  .name
+    width: 65%
+    float: right
+    padding-top: 10%
+
+  .item_details
+    border: 1px solid #dcdcdc
+    padding: 5px
+    margin: 5px
+    position: relative
+
+.cart_listing
+  border-bottom: 1px solid #cac7c7
+  display: inline-block
+  padding: 10px 2px
+  font-size: 0.9em
+
+.cart_total
+  position: relative
+  display: inline-block
+  border: 2px solid #c5c4c4
+  margin-top: 15px
+
+.items_quantity
+  input
+    &.button-minus, &.button-plus
+      float: left
+      padding: 0
+      width: 30%
+      background: #fff
+      border: navajowhite
+      cursor: pointer
+
+  #item_quantity
+    width: 40%
+    float: left
+    padding: 2px
+    margin-top: -5px
+
+.cart_total
+  .item_total, .half-width
+    padding: 10px
+    position: relative
+
+  .items_total_quantity_value, .items_discount_value, .items_type_discount_value, .items_subtotal_value
+    text-align: right
+
+.items_discount, .items_discount_value
+  margin-bottom: -10px
+
+.cart_total
+  .items_total_quantity:after, .items_discount:after, .items_type_discount:after, .items_subtotal:after
+    content: ":"
+    position: absolute
+    right: 0
+    top: 10px
+
+.cart_subtotal
+  background: #efefef
+  width: 100%
+  display: inline-flex
+
+.deleteId
+  position: absolute
+  right: 5px
+  top: 30px
+  font-size: 0.7em
+  cursor: pointer
+
+@media (min-width: 768px) and (max-width: 991px)
+  .product-listing .product
+    max-width: 50%
+    width: calc(48% - 10px)
+
+@media (max-width: 767px)
+  .cart
+    width: 100%
+    float: none
+
+  .product-listing
+    width: 100%
+    float: none
+
+    .product
+      max-width: 100%
+      width: calc(100% - 10px)
+      float: none
+
+  .header .cart-added
+    font-size: 0.6em
+    top: 35%
